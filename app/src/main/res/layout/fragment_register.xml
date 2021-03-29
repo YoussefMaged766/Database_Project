@@ -1,0 +1,916 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:fillViewport="true"
+    android:background="@drawable/ic_untitled_9"
+    tools:context=".ui.dashboard.DashboardFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:nestedScrollingEnabled="true"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/txt_id_register"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone" />
+
+        <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="10dp"
+        android:elevation="10dp"
+        app:cardElevation="10dp"
+        app:cardCornerRadius="20dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/text_gpa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:padding="5dp"
+                android:text="Gpa  :"
+                android:textColor="@color/text"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/gpa_register"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:textColor="@color/text"
+                android:textSize="13sp" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="300dp"
+            android:layout_gravity="center"
+            android:layout_height="1dp"
+            android:background="@color/black"
+            android:layout_margin="5dp"/>
+
+        <RadioGroup
+            android:id="@+id/radio_group_term"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_margin="5dp"
+            android:gravity="center"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/spring"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:textSize="10sp"
+                android:textColor="@color/text"
+                android:layout_height="wrap_content"
+                android:text="Spring"/>
+
+            <RadioButton
+                android:id="@+id/summer"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:textSize="10sp"
+                android:textColor="@color/text"
+                android:layout_height="wrap_content"
+                android:text="Summer"/>
+
+            <RadioButton
+                android:id="@+id/winter"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:textSize="10sp"
+                android:textColor="@color/text"
+                android:text="Winter"/>
+
+            <RadioButton
+                android:id="@+id/autumn"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:textSize="10sp"
+                android:textColor="@color/text"
+                android:text="Autumn"/>
+
+        </RadioGroup>
+
+        <View
+            android:layout_width="300dp"
+            android:layout_gravity="center"
+            android:layout_height="1dp"
+            android:background="@color/black"
+            android:layout_margin="5dp"/>
+
+    <RadioGroup
+        android:id="@+id/radio_group_depart"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_margin="5dp"
+        android:padding="5dp"
+        android:layout_gravity="center"
+        android:layout_height="wrap_content">
+
+        <RadioButton
+            android:id="@+id/it"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:textSize="10sp"
+            android:textColor="@color/text"
+            android:text="It"/>
+
+        <RadioButton
+            android:id="@+id/cs"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:textSize="10sp"
+            android:textColor="@color/text"
+            android:text="CS"/>
+
+        <RadioButton
+            android:id="@+id/is"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text"
+            android:textSize="10sp"
+            android:text="IS"/>
+
+        <RadioButton
+            android:id="@+id/mm"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:textSize="10sp"
+            android:textColor="@color/text"
+            android:text="Mm"/>
+
+    </RadioGroup>
+
+    </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+         <!-- Subjects -->
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/Lit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:elevation="15dp"
+            android:padding="5dp"
+            android:visibility="invisible"
+            app:cardCornerRadius="10sp"
+            app:cardElevation="15dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingStart="10dp">
+
+                <CheckBox
+                    android:id="@+id/itnetwork"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="Network Security  IT311 "
+                    android:textColor="@color/text"
+                    android:textSize="10sp" />
+
+                <View
+                    android:layout_width="300dp"
+                    android:layout_height="1dp"
+                    android:layout_gravity="center"
+                    android:layout_margin="5dp"
+                    android:background="@color/black" />
+
+                <CheckBox
+                    android:id="@+id/subject2it"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="System Analysis  IS231"
+                    android:textColor="@color/text"
+                    android:textSize="10sp" />
+
+                <View
+                    android:layout_width="300dp"
+                    android:layout_height="1dp"
+                    android:layout_gravity="center"
+                    android:layout_margin="5dp"
+                    android:background="@color/black" />
+
+                <CheckBox
+                    android:id="@+id/subject3it"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text=" Data Structure  CS211"
+                    android:textColor="@color/text"
+                    android:textSize="10sp" />
+
+                <View
+                    android:layout_width="300dp"
+                    android:layout_height="1dp"
+                    android:layout_gravity="center"
+                    android:layout_margin="5dp"
+                    android:background="@color/black" />
+
+                <CheckBox
+                    android:id="@+id/subject4it"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="Database  IS212"
+                    android:textColor="@color/text"
+                    android:textSize="10sp" />
+
+                <View
+                    android:layout_width="300dp"
+                    android:layout_height="1dp"
+                    android:layout_gravity="center"
+                    android:layout_margin="5dp"
+                    android:background="@color/black" />
+
+                <CheckBox
+                    android:id="@+id/subject5it"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="Data Communication  IT251"
+                    android:textColor="@color/text"
+                    android:textSize="10sp" />
+
+                <View
+                    android:layout_width="300dp"
+                    android:layout_height="1dp"
+                    android:layout_gravity="center"
+                    android:layout_margin="5dp"
+                    android:background="@color/black" />
+
+
+                <CheckBox
+                    android:id="@+id/subject6it"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="Computer Architecture CE221"
+                    android:textColor="@color/text"
+                    android:textSize="10sp" />
+
+                <View
+                    android:layout_width="300dp"
+                    android:layout_height="1dp"
+                    android:layout_gravity="center"
+                    android:layout_margin="5dp"
+                    android:background="@color/black" />
+
+
+                <CheckBox
+                    android:id="@+id/subject7it"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="Math3  MA201"
+                    android:textColor="@color/text"
+                    android:textSize="10sp" />
+
+                <View
+                    android:layout_width="300dp"
+                    android:layout_height="1dp"
+                    android:layout_gravity="center"
+                    android:layout_margin="5dp"
+                    android:background="@color/black" />
+
+
+                <CheckBox
+                    android:id="@+id/subject8it"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:hint="Programing Fundamental"
+                    android:maxLines="1"
+                    android:textColor="@color/text"
+                    android:textSize="10sp" />
+
+                <View
+                    android:layout_width="300dp"
+                    android:layout_height="1dp"
+                    android:layout_gravity="center"
+                    android:layout_margin="5dp"
+                    android:background="@color/black" />
+
+
+                <CheckBox
+                    android:id="@+id/subject9it"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:hint="Programing Fundamental"
+                    android:maxLines="1"
+                    android:textColor="@color/text"
+                    android:textSize="10sp" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/Lcs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:elevation="15dp"
+            android:padding="5dp"
+            android:visibility="invisible"
+            app:cardCornerRadius="10sp"
+            app:cardElevation="15dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingStart="10dp">
+
+                <CheckBox
+                    android:id="@+id/subject1cs"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="Artificial Intelligence  CS361"
+                    android:textColor="@color/text"
+                    android:textSize="10sp" />
+
+                <View
+                    android:layout_width="300dp"
+                    android:layout_height="1dp"
+                    android:layout_gravity="center"
+                    android:layout_margin="5dp"
+                    android:background="@color/black" />
+
+                <CheckBox
+                    android:id="@+id/subject2cs"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text=" Data Structure  CS211"
+                    android:textColor="@color/text"
+                    android:textSize="10sp" />
+
+                <View
+                    android:layout_width="300dp"
+                    android:layout_height="1dp"
+                    android:layout_gravity="center"
+                    android:layout_margin="5dp"
+                    android:background="@color/black" />
+
+                <CheckBox
+                    android:id="@+id/subject3cs"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="Database  IS212"
+                    android:textColor="@color/text"
+                    android:textSize="10sp" />
+
+                <View
+                    android:layout_width="300dp"
+                    android:layout_height="1dp"
+                    android:layout_gravity="center"
+                    android:layout_margin="5dp"
+                    android:background="@color/black" />
+
+                <CheckBox
+                    android:id="@+id/subject4cs"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="Data Communication  IT251"
+                    android:textColor="@color/text"
+                    android:textSize="10sp" />
+
+                <View
+                    android:layout_width="300dp"
+                    android:layout_height="1dp"
+                    android:layout_gravity="center"
+                    android:layout_margin="5dp"
+                    android:background="@color/black" />
+
+                <CheckBox
+                    android:id="@+id/subject5cs"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="Computer Architecture CE221"
+                    android:textColor="@color/text"
+                    android:textSize="10sp" />
+
+                <View
+                    android:layout_width="300dp"
+                    android:layout_height="1dp"
+                    android:layout_gravity="center"
+                    android:layout_margin="5dp"
+                    android:background="@color/black" />
+
+
+                <CheckBox
+                    android:id="@+id/subject6cs"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="System Analysis  IS231"
+                    android:textColor="@color/text"
+                    android:textSize="10sp" />
+
+                <View
+                    android:layout_width="300dp"
+                    android:layout_height="1dp"
+                    android:layout_gravity="center"
+                    android:layout_margin="5dp"
+                    android:background="@color/black" />
+
+
+                <CheckBox
+                    android:id="@+id/subject7cs"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="Math3  MA201"
+                    android:textColor="@color/text"
+                    android:textSize="10sp" />
+
+                <View
+                    android:layout_width="300dp"
+                    android:layout_height="1dp"
+                    android:layout_gravity="center"
+                    android:layout_margin="5dp"
+                    android:background="@color/black" />
+
+
+                <CheckBox
+                    android:id="@+id/subject8cs"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:hint="Programing Fundamental"
+                    android:maxLines="1"
+                    android:textColor="@color/text"
+                    android:textSize="10sp" />
+
+                <View
+                    android:layout_width="300dp"
+                    android:layout_height="1dp"
+                    android:layout_gravity="center"
+                    android:layout_margin="5dp"
+                    android:background="@color/black" />
+
+
+                <CheckBox
+                    android:id="@+id/subject9cs"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:hint="Programing Fundamental"
+                    android:maxLines="1"
+                    android:textColor="@color/text"
+                    android:textSize="10sp" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/Lis"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:elevation="15dp"
+            android:padding="5dp"
+            android:visibility="invisible"
+            app:cardCornerRadius="10sp"
+            app:cardElevation="15dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingStart="10dp">
+
+                <CheckBox
+                    android:id="@+id/suject1is"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="Computer Architecture and Operating Systems   CS322"
+                    android:textColor="@color/text"
+                    android:textSize="10sp" />
+
+                <View
+                    android:layout_width="300dp"
+                    android:layout_height="1dp"
+                    android:layout_gravity="center"
+                    android:layout_margin="5dp"
+                    android:background="@color/black" />
+
+                <CheckBox
+                    android:id="@+id/suject2is"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text=" Data Structure  CS211"
+                    android:textColor="@color/text"
+                    android:textSize="10sp" />
+
+                <View
+                    android:layout_width="300dp"
+                    android:layout_height="1dp"
+                    android:layout_gravity="center"
+                    android:layout_margin="5dp"
+                    android:background="@color/black" />
+
+                <CheckBox
+                    android:id="@+id/suject3is"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="Database  IS212"
+                    android:textColor="@color/text"
+                    android:textSize="10sp" />
+
+                <View
+                    android:layout_width="300dp"
+                    android:layout_height="1dp"
+                    android:layout_gravity="center"
+                    android:layout_margin="5dp"
+                    android:background="@color/black" />
+
+                <CheckBox
+                    android:id="@+id/suject4is"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="Data Communication  IT251"
+                    android:textColor="@color/text"
+                    android:textSize="10sp" />
+
+                <View
+                    android:layout_width="300dp"
+                    android:layout_height="1dp"
+                    android:layout_gravity="center"
+                    android:layout_margin="5dp"
+                    android:background="@color/black" />
+
+                <CheckBox
+                    android:id="@+id/suject5is"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="Computer Architecture CE221"
+                    android:textColor="@color/text"
+                    android:textSize="10sp" />
+
+                <View
+                    android:layout_width="300dp"
+                    android:layout_height="1dp"
+                    android:layout_gravity="center"
+                    android:layout_margin="5dp"
+                    android:background="@color/black" />
+
+
+                <CheckBox
+                    android:id="@+id/suject6is"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="System Analysis  IS231"
+                    android:textColor="@color/text"
+                    android:textSize="10sp" />
+
+                <View
+                    android:layout_width="300dp"
+                    android:layout_height="1dp"
+                    android:layout_gravity="center"
+                    android:layout_margin="5dp"
+                    android:background="@color/black" />
+
+
+                <CheckBox
+                    android:id="@+id/suject7is"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="Math3  MA201"
+                    android:textColor="@color/text"
+                    android:textSize="10sp" />
+
+                <View
+                    android:layout_width="300dp"
+                    android:layout_height="1dp"
+                    android:layout_gravity="center"
+                    android:layout_margin="5dp"
+                    android:background="@color/black" />
+
+
+                <CheckBox
+                    android:id="@+id/suject8is"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:hint="Programing Fundamental"
+                    android:maxLines="1"
+                    android:textColor="@color/text"
+                    android:textSize="10sp" />
+
+                <View
+                    android:layout_width="300dp"
+                    android:layout_height="1dp"
+                    android:layout_gravity="center"
+                    android:layout_margin="5dp"
+                    android:background="@color/black" />
+
+
+                <CheckBox
+                    android:id="@+id/suject9is"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:hint="Programing Fundamental"
+                    android:maxLines="1"
+                    android:textColor="@color/text"
+                    android:textSize="10sp" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/Lmm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:elevation="15dp"
+            android:padding="5dp"
+            android:visibility="invisible"
+            app:cardCornerRadius="10sp"
+            app:cardElevation="15dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingStart="10dp">
+
+                <CheckBox
+                    android:id="@+id/subject1mm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="Introduction to Multimedia Technology  MM301"
+                    android:textColor="@color/text"
+                    android:textSize="10sp" />
+
+                <View
+                    android:layout_width="300dp"
+                    android:layout_height="1dp"
+                    android:layout_gravity="center"
+                    android:layout_margin="5dp"
+                    android:background="@color/black" />
+
+                <CheckBox
+                    android:id="@+id/subject2mm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text=" Data Structure  CS211"
+                    android:textColor="@color/text"
+                    android:textSize="10sp" />
+
+                <View
+                    android:layout_width="300dp"
+                    android:layout_height="1dp"
+                    android:layout_gravity="center"
+                    android:layout_margin="5dp"
+                    android:background="@color/black" />
+
+                <CheckBox
+                    android:id="@+id/subject3mm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="Database  IS212"
+                    android:textColor="@color/text"
+                    android:textSize="10sp" />
+
+                <View
+                    android:layout_width="300dp"
+                    android:layout_height="1dp"
+                    android:layout_gravity="center"
+                    android:layout_margin="5dp"
+                    android:background="@color/black" />
+
+                <CheckBox
+                    android:id="@+id/subject4mm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="Data Communication  IT251"
+                    android:textColor="@color/text"
+                    android:textSize="10sp" />
+
+                <View
+                    android:layout_width="300dp"
+                    android:layout_height="1dp"
+                    android:layout_gravity="center"
+                    android:layout_margin="5dp"
+                    android:background="@color/black" />
+
+                <CheckBox
+                    android:id="@+id/subject5mm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="Computer Architecture CE221"
+                    android:textColor="@color/text"
+                    android:textSize="10sp" />
+
+                <View
+                    android:layout_width="300dp"
+                    android:layout_height="1dp"
+                    android:layout_gravity="center"
+                    android:layout_margin="5dp"
+                    android:background="@color/black" />
+
+
+                <CheckBox
+                    android:id="@+id/subject6mm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="System Analysis  IS231"
+                    android:textColor="@color/text"
+                    android:textSize="10sp" />
+
+                <View
+                    android:layout_width="300dp"
+                    android:layout_height="1dp"
+                    android:layout_gravity="center"
+                    android:layout_margin="5dp"
+                    android:background="@color/black" />
+
+
+                <CheckBox
+                    android:id="@+id/subject7mm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="Math3  MA201"
+                    android:textColor="@color/text"
+                    android:textSize="10sp" />
+
+                <View
+                    android:layout_width="300dp"
+                    android:layout_height="1dp"
+                    android:layout_gravity="center"
+                    android:layout_margin="5dp"
+                    android:background="@color/black" />
+
+
+                <CheckBox
+                    android:id="@+id/subject8mm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:hint="Programing Fundamental"
+                    android:maxLines="1"
+                    android:textColor="@color/text"
+                    android:textSize="10sp" />
+
+                <View
+                    android:layout_width="300dp"
+                    android:layout_height="1dp"
+                    android:layout_gravity="center"
+                    android:layout_margin="5dp"
+                    android:background="@color/black" />
+
+
+                <CheckBox
+                    android:id="@+id/subject9mm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:hint="Programing Fundamental"
+                    android:maxLines="1"
+                    android:textColor="@color/text"
+                    android:textSize="10sp" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:src="@drawable/ic_baseline_check_24"
+        android:contextClickable="true"
+        android:backgroundTint="@color/floating"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="90dp" />
+
+    </LinearLayout>
+
+</ScrollView>

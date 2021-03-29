@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Database Project</string>
+    <string name="title_home">Home</string>
+    <string name="title_register">Register</string>
+    <string name="title_current">Current</string>
+    <string name="title_history">History</string>
+</resources>
